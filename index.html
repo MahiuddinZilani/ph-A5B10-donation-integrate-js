@@ -51,7 +51,9 @@
               <p id="total-donated-amount-noakhali">0</p>
               <p>BDT</p>
             </button>
-            <h2 class="card-title">Donate for flood at Noakhali, Bangladesh</h2>
+            <h2 id="card-title-noakhali">
+              Donate for flood at Noakhali, Bangladesh
+            </h2>
             <p>
               The recent floods in Noakhali have devastated local communities,
               leading to severe disruption and loss. Your generous donation will
@@ -71,7 +73,7 @@
               />
               <button
                 class="btn btn-primary w-full"
-                onclick="donate('donate-noakhali', 'total-donated-amount-noakhali')"
+                onclick="donate('donate-noakhali', 'total-donated-amount-noakhali', 'card-title-noakhali')"
               >
                 Donate Now
               </button>
@@ -91,7 +93,9 @@
               <p id="total-donated-amount-feni">0</p>
               <p>BDT</p>
             </button>
-            <h2 class="card-title">Donate for flood at Feni, Bangladesh</h2>
+            <h2 id="card-title-feni">
+              Donate for flood relief in Feni, Bangladesh
+            </h2>
             <p>
               The recent floods in feni have devastated local communities,
               leading to severe disruption and loss. Your generous donation will
@@ -111,7 +115,7 @@
               />
               <button
                 class="btn btn-primary w-full"
-                onclick="donate('donate-feni', 'total-donated-amount-feni')"
+                onclick="donate('donate-feni', 'total-donated-amount-feni', 'card-title-feni')"
               >
                 Donate Now
               </button>
@@ -135,7 +139,7 @@
               <p id="total-donated-amount-quota-protest">0</p>
               <p>BDT</p>
             </button>
-            <h2 class="card-title">
+            <h2 id="card-title-qouta">
               Donate for flood at quota-protest, Bangladesh
             </h2>
             <p>
@@ -157,7 +161,7 @@
               />
               <button
                 class="btn btn-primary w-full"
-                onclick="donate('donate-quota-protest', 'total-donated-amount-quota-protest')"
+                onclick="donate('donate-quota-protest', 'total-donated-amount-quota-protest', 'card-title-qouta')"
               >
                 Donate Now
               </button>
@@ -165,10 +169,13 @@
           </div>
         </div>
       </section>
+
+      <section id="history-container"></section>
     </main>
 
     <footer></footer>
 
+    <!-- donation modal  -->
     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box flex flex-col items-center">
         <h3 class="text-2xl font-bold">Congrates!</h3>

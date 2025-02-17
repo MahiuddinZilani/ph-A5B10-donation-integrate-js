@@ -13,6 +13,8 @@ function addDonation(currentAmountId, donation) {
   document.getElementById(currentAmountId).innerText = newAmount;
 
   updateTotalBalance(donation);
+
+  return donation;
 }
 
 function updateTotalBalance(donation) {
@@ -34,4 +36,26 @@ function updateTotalBalance(donation) {
 
 function clearText(inputAmountId) {
   document.getElementById(inputAmountId).value = "";
+}
+
+function addTransactionInHistory(donation, donationFor) {
+  console.log("New history is added: ", donation);
+
+  let time = new Date();
+
+  let newTransaction = document.createElement("div");
+  newTransaction.classList.add(
+    "max-w-screen-lg",
+    "mx-auto",
+    "px-8",
+    "py-4",
+    "border",
+    "border-gray-400",
+    "rounded-lg"
+  );
+  newTransaction.innerHTML = `<h2>${donation} Tk:  ${donationFor}</h2>
+          <p>Date: ${time}</p>`;
+
+  document.getElementById("history-container").appendChild(newTransaction);
+  console.log(newTransaction);
 }
