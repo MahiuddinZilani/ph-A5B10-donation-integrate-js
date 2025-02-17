@@ -48,12 +48,12 @@
           <div class="card-body lg:w-1/2">
             <button class="badge p-4 flex gap-2">
               <img src="./assets/coin.png" alt="" />
-              <p id="donation-in-feni">0</p>
+              <p id="total-donated-amount-noakhali">0</p>
               <p>BDT</p>
             </button>
             <h2 class="card-title">Donate for flood at Noakhali, Bangladesh</h2>
             <p>
-              The recent floods in Feni have devastated local communities,
+              The recent floods in Noakhali have devastated local communities,
               leading to severe disruption and loss. Your generous donation will
               help provide immediate aid, including food, clean water, and
               medical supplies, to those affected by this calamity. Together, we
@@ -66,10 +66,99 @@
               <input
                 type="text"
                 placeholder="Donate"
-                id="donated-amount-feni"
+                id="donate-noakhali"
                 class="input input-bordered input-md w-full"
               />
-              <button id="donate-feni" class="btn btn-primary w-full">
+              <button
+                class="btn btn-primary w-full"
+                onclick="donate('donate-noakhali', 'total-donated-amount-noakhali')"
+              >
+                Donate Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="card lg:card-side bg-base-100 shadow-xl lg:w-4/5 mx-auto">
+          <figure class="lg:w-1/2">
+            <img src="./assets/feni.png" alt="Album" class="lg:w-2/3" />
+          </figure>
+
+          <div class="card-body lg:w-1/2">
+            <button class="badge p-4 flex gap-2">
+              <img src="./assets/coin.png" alt="" />
+              <p id="total-donated-amount-feni">0</p>
+              <p>BDT</p>
+            </button>
+            <h2 class="card-title">Donate for flood at Feni, Bangladesh</h2>
+            <p>
+              The recent floods in feni have devastated local communities,
+              leading to severe disruption and loss. Your generous donation will
+              help provide immediate aid, including food, clean water, and
+              medical supplies, to those affected by this calamity. Together, we
+              can offer crucial support and help rebuild lives in the aftermath
+              of this disaster. Every contribution counts towards making a real
+              difference. Please consider donating today to assist those in
+              urgent need. Write Donation Amount
+            </p>
+            <div class="card-actions justify-end w-full">
+              <input
+                type="text"
+                placeholder="Donate"
+                id="donate-feni"
+                class="input input-bordered input-md w-full"
+              />
+              <button
+                class="btn btn-primary w-full"
+                onclick="donate('donate-feni', 'total-donated-amount-feni')"
+              >
+                Donate Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="card lg:card-side bg-base-100 shadow-xl lg:w-4/5 mx-auto">
+          <figure class="lg:w-1/2">
+            <img
+              src="./assets/quota-protest.png"
+              alt="Album"
+              class="lg:w-2/3"
+            />
+          </figure>
+
+          <div class="card-body lg:w-1/2">
+            <button class="badge p-4 flex gap-2">
+              <img src="./assets/coin.png" alt="" />
+              <p id="total-donated-amount-quota-protest">0</p>
+              <p>BDT</p>
+            </button>
+            <h2 class="card-title">
+              Donate for flood at quota-protest, Bangladesh
+            </h2>
+            <p>
+              The recent floods in quota-protest have devastated local
+              communities, leading to severe disruption and loss. Your generous
+              donation will help provide immediate aid, including food, clean
+              water, and medical supplies, to those affected by this calamity.
+              Together, we can offer crucial support and help rebuild lives in
+              the aftermath of this disaster. Every contribution counts towards
+              making a real difference. Please consider donating today to assist
+              those in urgent need. Write Donation Amount
+            </p>
+            <div class="card-actions justify-end w-full">
+              <input
+                type="text"
+                placeholder="Donate"
+                id="donate-quota-protest"
+                class="input input-bordered input-md w-full"
+              />
+              <button
+                class="btn btn-primary w-full"
+                onclick="donate('donate-quota-protest', 'total-donated-amount-quota-protest')"
+              >
                 Donate Now
               </button>
             </div>
@@ -80,6 +169,22 @@
 
     <footer></footer>
 
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box flex flex-col items-center">
+        <h3 class="text-2xl font-bold">Congrates!</h3>
+        <figure><img src="./assets/coin.png" alt="" /></figure>
+        <p class="py-4">You Have Donated for Humankind</p>
+        <h5 class="text-sm font-bold">Successfully</h5>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- Close button inside modal -->
+            <button class="btn">Close Confirmation</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="./scripts/utilities.js"></script>
     <script src="./scripts/scripts.js"></script>
   </body>
 </html>
