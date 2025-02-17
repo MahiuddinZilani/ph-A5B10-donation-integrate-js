@@ -34,11 +34,11 @@
 
     <main>
       <section class="flex justify-center gap-4">
-        <button class="btn">Donation</button>
-        <button class="btn">History</button>
+        <button id="donate-btn" class="btn bg-green-400">Donation</button>
+        <button id="history-btn" class="btn">History</button>
       </section>
 
-      <section>
+      <section id="donations-container">
         <!-- card 1 -->
         <div class="card lg:card-side bg-base-100 shadow-xl lg:w-4/5 mx-auto">
           <figure class="lg:w-1/2">
@@ -170,7 +170,7 @@
         </div>
       </section>
 
-      <section id="history-container"></section>
+      <section id="history-container" class="hidden"></section>
     </main>
 
     <footer></footer>
@@ -192,6 +192,7 @@
     </dialog>
 
     <script src="./scripts/utilities.js"></script>
+    <script src="./scripts/toggle.js"></script>
     <script src="./scripts/scripts.js"></script>
   </body>
 </html>
