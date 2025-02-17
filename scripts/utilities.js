@@ -35,9 +35,3 @@ function updateTotalBalance(donation) {
 function clearText(inputAmountId) {
   document.getElementById(inputAmountId).value = "";
 }
-
-// <!-- Open the modal using ID.showModal() method -->
-
-{
-  /* <button class="btn" onclick="my_modal_5.showModal()">open modal</button> */
-}
