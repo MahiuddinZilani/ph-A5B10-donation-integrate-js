@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Donate Bangladesh</title>
+  </head>
+  <body>
+    <div class="join join-vertical w-full">
+      <div class="collapse collapse-arrow join-item border-base-300 border">
+        <input type="radio" name="my-accordion-4" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The Document Object Model (DOM) is programming interface for web
+            documents. It represents the structure of an HTML document as a tree
+            of objects, allowing scripts to manipulate content dynamically. DOM
+            is essential for dynamic web development. It acts as the bridge
+            between JS and the webpage, allowing developers to manipulate
+            content in real time.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border-base-300 border">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium">
+          How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            There are five different DOM selection methods to access and
+            manipulate HTML element in Javascript. Those are used for different
+            purpose to select HTML element. <br />
+            1. Select by ID - document.getElementById("id") <br />
+            2. Select by Class - document.getElementByClass("class") <br />
+            3. Select by Tag - document.getElementByTagName("tag") <br />
+            4. Select single element by Query Selector -
+            document.querySelector("selector") <br />
+            5. Select multiple elements - document.querySelectorAll("selector")
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border-base-300 border">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium">
+          What is event delegation in the context of the DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>Event delegation is a technique in JS where a paren element listens for events
+            on its child elements using event bubbling. Instead of adding event listeners to 
+            multiple child element, you add a single event listener to the parent. Here is an 
+            example of event delegation. Here instead of adding listeners to each &lt;li&gt;,
+            we add a listener to the &lt;ul&gt; and use the event.target to detect which &lt;li&gt; was clicked.
+            <br> <br>
+            <div class="mockup-code">
+              <pre >
+              &lt;ul id="list"&gt;
+                  &lt;li&gt;Item 1&lt;/li&gt;
+                  &lt;li&gt;Item 2&lt;/li&gt;
+                  &lt;li&gt;Item 3&lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;script&gt;
+                  document.getElementById("list").addEventListener("click", function (event) {
+                    if (event.target.tagName === "LI") {
+                      alert(event.target.innerText + " clicked");
+                    }
+                  });
+                &lt;/script&gt;
+              </pre>
+              
+            </div>
+          </p>
+          <p>
+            Why is event delegation useful? <br>
+            1. Reduce memory usage <br>
+            2. Reduce the number of event listeners <br>
+            3. Simplify the code <br>
+          </p>
+          <p>
+            When to use event delegation? <br>
+            1. When a large number of child elements <br>
+            2. When handling events on a group of elements <br>
+
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border-base-300 border">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium">
+          How do you manipulate an element's attributes and styles using the
+          DOM?
+        </div>
+        <div class="collapse-content">
+          <p>In JS, we can use DOM methods and properties to modify an element's attributes
+            and styles. Here are some common methods and properties used to manipulate an element's attributes and styles- 
+          </p>
+          <p>
+            1. Mani
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

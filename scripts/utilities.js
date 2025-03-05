@@ -3,30 +3,23 @@ function getValueById(inputId) {
   return parseInt(newDonationAmount);
 }
 
-function addDonation(currentAmountId, donation) {
-  let currentAmount = parseInt(
-    document.getElementById(currentAmountId).innerText
-  );
-
-  let newAmount = currentAmount + donation;
-
-  document.getElementById(currentAmountId).innerText = newAmount;
-
-  updateTotalBalance(donation);
-
-  return donation;
+function clearText(inputAmountId) {
+  document.getElementById(inputAmountId).value = "";
 }
 
-function updateTotalBalance(donation) {
+// update balance
+function updateTotalBalance(currentAmountId, newDonation, donationTitleId) {
   let totalBalance = document
     .getElementById("total-balance")
     .innerText.replace(/,/g, "");
 
-  if (totalBalance >= donation) {
-    let newBalance = parseInt(totalBalance) - donation;
+  if (totalBalance >= newDonation) {
+    let newBalance = parseInt(totalBalance) - newDonation;
 
     document.getElementById("total-balance").innerText =
       newBalance.toLocaleString();
+
+    addDonation(currentAmountId, newDonation, donationTitleId);
 
     document.getElementById("my_modal_5").showModal();
   } else {
@@ -34,10 +27,21 @@ function updateTotalBalance(donation) {
   }
 }
 
-function clearText(inputAmountId) {
-  document.getElementById(inputAmountId).value = "";
+// add donation
+function addDonation(currentAmountId, donation, donationTitleId) {
+  let currentAmount = parseInt(
+    document.getElementById(currentAmountId).innerText
+  );
+
+  let newAmount = currentAmount + donation;
+  document.getElementById(currentAmountId).innerText =
+    newAmount.toLocaleString();
+
+  let donationFor = document.getElementById(donationTitleId).innerText;
+  addTransactionInHistory(donation, donationFor);
 }
 
+// add transaction in history
 function addTransactionInHistory(donation, donationFor) {
   console.log("New history is added: ", donation);
 
@@ -46,14 +50,15 @@ function addTransactionInHistory(donation, donationFor) {
   let newTransaction = document.createElement("div");
   newTransaction.classList.add(
     "max-w-screen-lg",
-    "mx-auto",
+    "m-4",
     "px-8",
     "py-4",
     "border",
     "border-gray-400",
-    "rounded-lg"
+    "rounded-lg",
+    "lg:mx-auto"
   );
-  newTransaction.innerHTML = `<h2>${donation} Tk:  ${donationFor}</h2>
+  newTransaction.innerHTML = `<h2 class="text-lg font-semibold">${donation.toLocaleString()} Tk:  ${donationFor}</h2>
           <p>Date: ${time}</p>`;
 
   document.getElementById("history-container").appendChild(newTransaction);
